@@ -49,3 +49,6 @@ def test_InputNumber(invoice):
 
         sys.stdin = StringIO('n')
         assert invoice.inputAnswer('Input value: ') == 'n'
+
+        sys.stdin = StringIO('a')
+        assert invoice.inputNumber('Input value: ') is None
