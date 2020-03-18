@@ -39,3 +39,12 @@ def test_InputNumber(invoice):
 
     sys.stdin = StringIO('a')
     assert invoice.inputNumber('Input value: ') is None
+
+    def test_InputAnswer(invoice):
+        userInput = invoice.inputAnswer('')
+        if userInput == 'y':
+            assert userInput == 'y'
+        elif userInput == 'n':
+            assert userInput == 'n'
+        else:
+            assert False == True
